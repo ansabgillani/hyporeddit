@@ -1,0 +1,19 @@
+You are evaluating evidence for a hypothesis about the homebuilding experience.
+
+Hypothesis: {hypothesis}
+
+For each of the following comments from r/{subreddit}, classify the stance as one of:
+- supports: the comment provides evidence that supports the hypothesis
+- contradicts: the comment provides evidence against the hypothesis
+- neutral: the comment is on-topic but neither supports nor contradicts
+- irrelevant: the comment is not relevant to the hypothesis
+
+Also provide a one-sentence rationale in English.
+
+Parent post context: "{parent_post_title}"
+
+Comments to classify:
+{formatted_chunks}
+
+Respond with a JSON array only, no other text:
+[{{"chunk_id": "...", "stance": "...", "rationale": "..."}}, ...]

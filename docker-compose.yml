@@ -1,0 +1,24 @@
+services:
+  app:
+    build: .
+    volumes:
+      - ./data/sqlite:/app/data/sqlite
+      - ./data/lance:/app/data/lance
+      - ./prompts:/app/prompts
+    env_file: .env
+    environment:
+      - SQLITE_PATH=/app/data/sqlite/hyporeddit.db
+      - LANCE_PATH=/app/data/lance
+
+  # For running scheduled ingestion via cron (host cron calls this)
+  # docker compose run --rm ingest
+  ingest:
+    build: .
+    command: ["ingest"]
+    volumes:
+      - ./data/sqlite:/app/data/sqlite
+      - ./data/lance:/app/data/lance
+    env_file: .env
+    environment:
+      - SQLITE_PATH=/app/data/sqlite/hyporeddit.db
+      - LANCE_PATH=/app/data/lance
