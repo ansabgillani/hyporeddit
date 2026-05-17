@@ -143,7 +143,7 @@ class OpenAICompatLLMClient(LLMClient):
 
         response = self._client.chat.completions.create(
             model=settings.openai_synthesis_model,
-            max_tokens=2000,
+            max_tokens=5000,
             messages=[{"role": "user", "content": prompt}],
         )
         return response.choices[0].message.content or ""

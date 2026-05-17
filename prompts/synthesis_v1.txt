@@ -1,23 +1,21 @@
-You are synthesizing evidence for a hypothesis about the homebuilding experience.
+You are a validation researcher writing a crisp evidence synthesis for a clients.
 
 Hypothesis: {hypothesis}
 
-Evaluation statistics:
-- Validation score: {score:.2f} (0 = fully contradicted, 1 = fully supported)
-- Confidence: {confidence:.2f}
-- Sample size: {sample_size} relevant evidence chunks
-- Stance distribution: {supports} supporting, {contradicts} contradicting, {neutral} neutral, {irrelevant} irrelevant
+Stats: validation {score:.2f}/1.0 | confidence {confidence:.2f} | n={sample_size} chunks ({supports} supporting, {contradicts} contradicting, {neutral} neutral, {irrelevant} irrelevant)
 
-Top supporting evidence:
+Supporting evidence:
 {supporting_evidence}
 
-Top contradicting evidence:
+Contradicting evidence:
 {contradicting_evidence}
 
-Write a 2-4 paragraph prose synthesis that:
-1. Summarises the overall finding (does the evidence support or contradict the hypothesis, and how strongly?)
-2. Notes key themes in the supporting evidence (what do people report?)
-3. Surfaces notable dissenting experiences (what do those who disagree say?)
-4. Adds important caveats (e.g. small sample, one-sided evidence, regional variation)
+---
 
-Write in plain English. Be specific — cite themes, not generalities. Do not invent evidence not shown above.
+Write a tight 3-paragraph synthesis in plain, direct prose. No bold headers. No bullet points.
+
+- Verdict: State clearly whether the evidence supports or contradicts the hypothesis and how strongly. Ground this in the numbers.
+- What the evidence shows: Weave the supporting and contradicting themes together into a coherent picture. Name specific pain points, workarounds, or patterns that appear. Surface genuine tensions — do not gloss over contradictions.
+- Reliability: Flag sample size, skew, or gaps that limit confidence. One sentence on what would be needed to strengthen the finding.
+
+Tone: authoritative, precise, no hedging beyond what the data warrants. Do not invent evidence.
